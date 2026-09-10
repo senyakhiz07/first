@@ -1,22 +1,26 @@
-#pragma once
+#include "Triangle.h"
 
-class Triangle {
-private:
-    double side;    // сторона треугольника
-    double height;  // высота, проведённая к этой стороне
+Triangle::Triangle(double side, double height) {
+    setSide(side);
+    setHeight(height);
+}
 
-public:
-    // Конструктор инициализации
-    Triangle(double side, double height);
+double Triangle::getArea() const {
+    return 0.5 * side * height;
+}
 
-    // Метод вычисления площади
-    double getArea() const;
+double Triangle::getSide() const {
+    return side;
+}
 
-    // Геттеры
-    double getSide() const;
-    double getHeight() const;
+double Triangle::getHeight() const {
+    return height;
+}
 
-    // Сеттеры с проверками
-    void setSide(double side);
-    void setHeight(double height);
-};
+void Triangle::setSide(double side) {
+    this->side = side;
+}
+
+void Triangle::setHeight(double height) {
+    this->height = height;
+}

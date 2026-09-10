@@ -23,4 +23,6 @@ int main() {
 
     Triangle t(side, height);
     std::cout << "Площадь треугольника: " << t.getArea() << std::endl;
+
+    return 0;
 }
